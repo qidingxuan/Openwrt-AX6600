@@ -156,6 +156,7 @@ jobs:
           # LuCI 插件本体由 Packages.sh 克隆到 package/，这里不再加 LuCI feed，避免同名包双重定义。
           if [[ "$WRT_PROFILE" == "PLUS" ]]; then
             echo "src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages" >> feeds.conf.default
+            echo "src-git qmodem https://github.com/FUjr/QModem" >> feeds.conf.default
           fi
 
       - name: Check Scripts
